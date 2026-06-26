@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grosir Sweater Rajut Bandung | Supplier Langsung</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    :root{
+      --oranye:#ee4d2d; /* Warna Shopee */
+      --hijau:#25D366;  /* Warna WA */
+    }
+    *{box-sizing:border-box; scroll-behavior:smooth;}
+    body{
+      margin:0; 
+      font-family:'Poppins',sans-serif; 
+      color:#fff;
+      /* BACKGROUND GAMBAR SAMAR */
+      background: linear-gradient(rgba(15,15,15,.85), rgba(15,15,15,.85)), 
+                  url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1974') center/cover fixed;
+    }
+    
+    /* 1. VIDEO HEADER FULL LAYAR */
+    .hero{
+      height:100vh; 
+      display:grid; 
+      place-items:center; 
+      text-align:center; 
+      position:relative; 
+      overflow:hidden;
+    }
+    .hero video{
+      position:absolute; 
+      top:50%; left:50%; 
+      min-width:100%; min-height:100%; 
+      transform:translate(-50%,-50%); 
+      z-index:-1; 
+      filter:brightness(.4); /* Bikin videonya gelap biar teks kebaca */
+    }
+    .hero h1{font-size:clamp(40px, 8vw, 80px); font-weight:900; margin:0; line-height:1.1;}
+    .hero p{font-size:clamp(16px, 2vw, 20px); opacity:.8; max-width:600px; margin:16px auto;}
+
+    /* 2. TOMBOL CTA NEMPEL / STICKY */
+    .cta-sticky{
+      position:fixed; 
+      bottom:20px; 
+      left:50%; 
+      transform:translateX(-50%);
+      display:flex; 
+      gap:12px; 
+      z-index:9999;
+      width:95%; 
+      max-width:420px;
+    }
+    .btn{
+      flex:1; 
+      padding:14px 20px; 
+      font-weight:700; 
+      border-radius:12px; 
+      text-decoration:none; 
+      text-align:center;
+      transition:.3s; 
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,.2);
+    }
+    .btn:hover{transform:translateY(-3px);}
+    .btn-shopee{background:rgba(238,77,45,.9); color:#fff; box-shadow:0 8px 20px rgba(238,77,45,.4);}
+    .btn-wa{background:rgba(37,211,102,.9); color:#fff; box-shadow:0 8px 20px rgba(37,211,102,.4);}
+
+    /* 3. ISI KONTEN */
+    section{padding:80px 5%; max-width:1100px; margin:auto;}
+    h2{font-size:36px; font-weight:700; text-align:center; margin-bottom:40px;}
+    .produk-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px;}
+    .card{
+      background:rgba(255,255,255,.05); 
+      backdrop-filter:blur(10px); 
+      border:1px solid rgba(255,255,255,.1); 
+      border-radius:20px; 
+      padding:20px; 
+      transition:.3s;
+    }
+    .card:hover{transform:translateY(-8px); border-color:var(--oranye);}
+    .card img{width:100%; border-radius:12px; aspect-ratio:4/5; object-fit:cover;}
+    .harga{font-size:20px; font-weight:700; color:var(--oranye);}
+  </style>
+</head>
+<body>
+
+  <!-- 1. HERO VIDEO + PENJELASAN -->
+  <section class="hero">
+    <!-- GANTI LINK VIDEO KAMU DI SINI. Pakai .mp4 -->
+    <video autoplay muted loop playsinline>
+      <source src="https://videos.pexels.com/video-files/5702702/5702702-hd_1920_1080_25fps.mp4" type="video/mp4">
+    </video>
+    <div data-aos="fade-up">
+      <h1>GROSIR SWEATER RAJUT</h1>
+      <p>Supplier langsung Bandung. Kualitas premium, harga mulai Rp72.000/kodi. 
+         Cocok untuk reseller & toko. Warna & model lengkap, ready setiap hari.</p>
+      <a href="#produk" class="btn" style="background:rgba(255,255,255,.1);">Lihat Katalog ↓</a>
+    </div>
+  </section>
+
+  <!-- 2. KATALOG PRODUK -->
+  <section id="produk">
+    <h2 data-aos="fade-up">Katalog Best Seller</h2>
+    <div class="produk-grid">
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <!-- GANTI FOTO KAMU -->
+        <img src="https://images.unsplash.com/photo-1631541909061-71e349d1f203?q=80&w=687" alt="Sweater Coklat">
+        <h3>Sweater Rajut Coklat</h3>
+        <p class="harga">Rp72.000 / kodi</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=687" alt="Sweater Cream">
+        <h3>Sweater Rajut Cream</h3>
+        <p class="harga">Rp72.000 / kodi</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?q=80&w=687" alt="Sweater Hitam">
+        <h3>Sweater Rajut Hitam</h3>
+        <p class="harga">Rp72.000 / kodi</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. TOMBOL NEMPEL DI BAWAH -->
+  <div class="cta-sticky" data-aos="fade-up" data-aos-offset="0">
+    <!-- GANTI LINK SHOPEE KAMU -->
+    <a href="https://shopee.co.id/namatoko_kamu" target="_blank" class="btn btn-shopee">🛒 Shopee</a>
+    <!-- GANTI NOMOR WA KAMU -->
+    <a href="https://wa.me/628886225629?text=Halo%20mau%20order%20sweater%20rajut" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({duration:800, once:true});</script>
+</body>
+</html>
